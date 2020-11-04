@@ -31,11 +31,19 @@ while(True):
     d2 = today.strftime("%B %d, %Y")
     a = "#PresidentialElection results as of " +  d2 +  ", " + current_time + ":" + "\n" + "\n"
 
+    ### POPULAR VOTE
     bidenVotes = soup.find('div', {'class':'PopVote PopVote--democrats'})
     trumpVotes = soup.find('div', {'class':'PopVote PopVote--republicans PopVote--rightAligned'})
 
-    a = a + "Trump: " + trumpVotes.text + "\n" + "Biden: " + bidenVotes.text + "\n" + "\n" + sources + "\n"
-    api.update_status(a)
+    ### ELECTORAL VOTES
+    trumpClass = soup.find('div', {'class':'Candidate Candidate--republican Candidate--rightAligned'})
+    trumpElectoralVotes = trumpClass.find('div', {'class':'Candidate__Votes'})
+
+    bidenClass = soup.find('div', {'class':'Candidate Candidate--democrat'})
+    bidenElectoralVotes = bidenClass.find('div', {'class':'Candidate__Votes'})
+
+    b = a + "Trump Popular Votes: " + trumpVotes.text + "\n" + "Trump Electoral Votes: " + trumpElectoralVotes.text + "\n \n" + "Biden Popular Votes: " + bidenVotes.text + "\n" "Biden Electoral Votes: " + bidenElectoralVotes.text +  "\n" + "\n" + sources + "\n"
+    api.update_status(b)
     print(a)
     print("TWEETED")
     time.sleep(300)
