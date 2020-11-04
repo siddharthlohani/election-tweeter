@@ -1,6 +1,6 @@
 # election-tweeter
-
 #### simple python web scraper that utilizes the twitter api to tweet live election data
+#### check out my [twitter](https://twitter.com/sidlohani) to see this project working!
  
 ### usage:
 ####  - to use this program, clone the repo into a directory of your choice
