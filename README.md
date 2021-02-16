@@ -32,4 +32,4 @@ python election.py
 
 
 ## About:
-#### hi, i'm sid! to see my other projects, visit my [website](http://dev.siddharthlohani.ninja/)!
+#### hi, i'm sid! to see my other projects, visit my [website](http://siddharthlohani.dev/)!
