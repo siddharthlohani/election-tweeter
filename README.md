@@ -5,7 +5,7 @@
 ### usage:
 ####  - to use this program, clone the repo into a directory of your choice
 ####  - IMPORTANT: make sure you have all the dependencies installed or the program will not compile
-####  - try running these commands in the command line to make sure you have all dependencies downloaded:
+####  - try running these commands in the command line to make sure you have all dependencies installed:
 
 ~~~
  => pip install bs4
